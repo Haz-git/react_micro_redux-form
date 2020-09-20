@@ -38,4 +38,6 @@ const Form = () => {
     )
 }
 
-export default Form;
+export default reduxForm({
+    form: 'form'
+})(Form);
