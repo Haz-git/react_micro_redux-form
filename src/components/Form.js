@@ -1,5 +1,6 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { connect } from 'react-redux';
 
 const nameField = ({ input }) => {
     return (
@@ -15,6 +16,10 @@ const ageField = ({ input }) => {
             <input {...input} type='text' />
         </div>
     )
+}
+
+const onSubmit = (formValues) => {
+    return formValues;
 }
 
 const Form = ({ handleSubmit }) => {
@@ -39,11 +44,6 @@ const Form = ({ handleSubmit }) => {
 }
 
 
-
-const onSubmit = (formValues) => {
-    console.log(formValues);
-}
-
 export default reduxForm({
-    form: 'form-custom',
+    form: 'reactForm',
 })(Form);

@@ -10,6 +10,9 @@ const Navigation = () => {
             <div>
                 <Link to='/form'>Form</Link>
             </div>
+            <div>
+                <Link to='/namelist'>Registered Name List</Link>
+            </div>
         </div>
     )
 }
