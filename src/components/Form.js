@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
 
     const nameField = () => {
         return (
@@ -21,10 +21,14 @@ const Form = () => {
         )
     }
 
+    onSubmit = (formValues) => {
+        
+    }
+
     return (
         <div>
             <h1>Hello! Welcome to the Form Page</h1>
-            <form className='ui form'>
+            <form onSubmit={handleSubmit(onSubmit)} className='ui form'>
                 <div>
                     <Field name='nameField' component={nameField} />
                 </div>
