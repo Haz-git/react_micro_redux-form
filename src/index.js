@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import App from './components/App';
 import { compose, createStore } from 'redux';
-import rootReducer from './reducers';
+import reducers from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers());
+const store = createStore(reducers, composeEnhancers());
 
 //composeEnhancers must be called as a function.
 
